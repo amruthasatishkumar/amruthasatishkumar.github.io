@@ -452,3 +452,33 @@ a {
     font-size: 32px;
   }
 }
+
+/* ===== HERO FIX (paste at bottom) ===== */
+
+/* Make sure hero doesn't slide under the fixed sidebar */
+.hero { margin: 0 0 96px !important; }
+
+/* Banner should fill cleanly (no weird empty space) */
+.hero-banner {
+  background: #fff !important;
+}
+
+/* Use cover (clean fill) and keep the important part visible */
+.hero-banner-img,
+.hero-banner img {
+  object-fit: cover !important;
+  object-position: center 25% !important; /* tweak 15%–40% if needed */
+}
+
+/* Profile photo must sit ABOVE sidebar */
+.hero-profile {
+  z-index: 50 !important; /* sidebar is 10 */
+}
+
+/* Optional: nudge profile right so it's not hugging the edge */
+.hero-profile { left: 44px !important; }
+
+/* Keep name/role under photo, aligned with profile */
+.hero-meta {
+  padding-left: 44px !important; /* match profile left */
+}
