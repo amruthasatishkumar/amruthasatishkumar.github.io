@@ -1,0 +1,21 @@
+title: Amrutha Satishkumar
+description: Data, AI, and systems notes
+baseurl: ""
+url: ""
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+excerpt_separator: "<!--more-->"
+permalink: /:categories/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

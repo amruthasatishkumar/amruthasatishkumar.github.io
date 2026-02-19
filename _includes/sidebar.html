@@ -1,0 +1,26 @@
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div>
+      <h2 class="site-title">Amrutha</h2>
+      <p class="site-tagline">Data • AI • Systems</p>
+    </div>
+    <button class="icon-button close" id="sidebar-close" aria-label="Close sidebar">Close</button>
+  </div>
+  <div class="search">
+    <input id="search-input" type="search" placeholder="Search articles">
+  </div>
+  <nav class="nav">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/articles/' | relative_url }}">Articles</a>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+  </nav>
+  <div class="section-list">
+    <h3>Sections</h3>
+    <ul>
+      <li><a href="{{ '/articles/' | relative_url }}" data-category="all">All</a></li>
+      {% for category in site.categories %}
+      <li><a href="{{ '/articles/' | relative_url }}?category={{ category[0] }}" data-category="{{ category[0] }}">{{ category[0] }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>

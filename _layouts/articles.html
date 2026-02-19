@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<section class="section">
+  <div class="section-header">
+    <h1>Articles</h1>
+    <p class="muted">Search by topic or use the category filters.</p>
+  </div>
+  <div class="filter-bar">
+    <button class="chip" data-category="all">All</button>
+    {% for category in site.categories %}
+    <button class="chip" data-category="{{ category[0] }}">{{ category[0] }}</button>
+    {% endfor %}
+  </div>
+  <div id="search-results" class="card-grid search-results"></div>
+  <div id="post-list" class="card-grid">
+    {% for post in site.posts %}
+    <article class="card" data-categories="{{ post.categories | join: ',' }}">
+      <div class="card-meta">
+        <span class="tag">{{ post.categories | first }}</span>
+        <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+      </div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
