@@ -120,14 +120,22 @@ a {
 }
 
 .hero {
+  width: 100%;
   margin: -48px -60px 28px;
   position: relative;
   --banner-height: 320px;
   --profile-overlap: 70px;
 }
 
+.hero-wrap {
+  width: 100%;
+  max-width: none;
+}
+
 .hero-banner {
   position: relative;
+  width: 100%;
+  max-width: none;
   height: var(--banner-height);
   overflow: visible;
   background: #d9e6f7;
@@ -144,6 +152,7 @@ a {
 
 .hero-banner img {
   width: 100%;
+  max-width: none;
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
