@@ -121,15 +121,17 @@ a {
 
 .hero {
   width: 100%;
-  margin: -48px -60px 28px;
+  margin: -48px -60px 56px;
   position: relative;
-  --banner-height: 320px;
+  --banner-height: 280px;
   --profile-overlap: 70px;
+  --profile-size: 160px;
 }
 
 .hero-wrap {
   width: 100%;
   max-width: none;
+  padding: 0;
 }
 
 .hero-banner {
@@ -138,7 +140,7 @@ a {
   max-width: none;
   height: var(--banner-height);
   overflow: visible;
-  background: #d9e6f7;
+  background: transparent;
   border-radius: 16px;
 }
 
@@ -155,7 +157,7 @@ a {
   max-width: none;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 60%;
   display: block;
   border-radius: 16px;
 }
@@ -169,8 +171,8 @@ a {
 }
 
 .hero-profile img {
-  width: 160px;
-  height: 160px;
+  width: var(--profile-size);
+  height: var(--profile-size);
   border-radius: 50%;
   border: 5px solid #fff;
   box-shadow: 0 14px 28px rgba(13, 27, 42, 0.18);
@@ -180,25 +182,25 @@ a {
 
 .hero-row {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   width: 100%;
-  margin: calc(-1 * var(--banner-height) + 180px) 0 0;
+  margin: 0;
   padding: 0 32px 28px;
   position: relative;
   z-index: 4;
 }
 
 .hero-left-spacer {
-  min-width: 190px;
-  flex: 0 0 190px;
+  display: none;
 }
 
 .hero-right,
 .hero-meta {
   max-width: 720px;
   text-align: left;
-  padding-top: 0;
+  padding-top: calc(var(--profile-size) - var(--profile-overlap) + 16px);
 }
 
 .hero-name {
@@ -416,7 +418,7 @@ a {
   }
 
   .hero {
-    margin: -32px -24px 24px;
+    margin: -32px -24px 40px;
   }
 
   .hero-banner {
@@ -425,9 +427,9 @@ a {
   }
 
   .hero-profile {
-    left: 50%;
+    left: 32px;
     bottom: calc(-1 * var(--profile-overlap));
-    transform: translateX(-50%);
+    transform: none;
   }
 
   .hero-name {
@@ -467,21 +469,20 @@ a {
 
   .hero-row {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 0;
     padding: 0 24px 12px;
-    text-align: center;
+    text-align: left;
   }
 
   .hero-left-spacer {
-    min-width: 0;
-    flex-basis: 0;
+    display: none;
   }
 
   .hero-right,
   .hero-meta {
-    text-align: center;
-    padding-top: 100px;
+    text-align: left;
+    padding-top: calc(var(--profile-size) - var(--profile-overlap) + 16px);
   }
 
   .hero-name {
