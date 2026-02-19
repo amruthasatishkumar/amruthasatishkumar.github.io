@@ -1,10 +1,10 @@
 :root {
-  --bg: #f6f3ef;
+  --bg: #eef3f9;
   --surface: #ffffff;
-  --ink: #101010;
-  --muted: #6f6a65;
-  --accent: #c9742c;
-  --accent-soft: #f5dcc7;
+  --ink: #0d1b2a;
+  --muted: #56647a;
+  --accent: #e06b1c;
+  --accent-soft: #ffe6d4;
   --shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
 }
 
@@ -17,7 +17,7 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at top, #fff7ed 0%, #f6f3ef 45%, #f3eee9 100%);
+  background: radial-gradient(circle at top, #f2f7ff 0%, #eef3f9 45%, #e8eef7 100%);
   min-height: 100vh;
 }
 
