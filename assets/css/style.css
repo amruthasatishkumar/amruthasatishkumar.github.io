@@ -121,19 +121,13 @@ a {
 
 .hero {
   margin: -48px -60px 28px;
-}
-
-.hero-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 32px;
   position: relative;
-  overflow: visible;
+  --banner-height: 320px;
 }
 
 .hero-banner {
   position: relative;
-  height: 320px;
+  height: var(--banner-height);
   overflow: hidden;
   background: #d9e6f7;
   border-radius: 16px;
@@ -142,30 +136,17 @@ a {
 .hero-banner img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
 }
 
-.hero-body {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  margin-top: -40px;
-  padding: 40px 0 0;
-}
-
 .hero-profile {
   position: absolute;
-  left: 48px;
-  top: 320px;
+  left: 32px;
+  top: var(--banner-height);
   transform: translateY(-50%);
-  z-index: 4;
-}
-
-.hero-spacer {
-  width: 200px;
-  flex: 0 0 200px;
+  z-index: 3;
 }
 
 .hero-profile img {
@@ -178,6 +159,21 @@ a {
   display: block;
 }
 
+.hero-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 1100px;
+  margin: -80px auto 0;
+  padding: 0 32px 12px;
+}
+
+.hero-left {
+  min-width: 200px;
+  flex: 0 0 200px;
+}
+
+.hero-right,
 .hero-meta {
   max-width: 720px;
   text-align: left;
@@ -412,29 +408,6 @@ a {
     transform: translate(-50%, -50%);
   }
 
-  .hero-body {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-    padding: 120px 0 0;
-  }
-
-  .hero-inner {
-    padding: 0 24px;
-    text-align: center;
-  }
-
-  .hero-meta {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .hero-spacer {
-    width: 0;
-    flex-basis: 0;
-    height: 0;
-  }
-
   .hero-name {
     font-size: 32px;
   }
@@ -456,5 +429,39 @@ a {
     opacity: 1;
     pointer-events: auto;
     display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    --banner-height: 240px;
+  }
+
+  .hero-profile {
+    left: 50%;
+    top: var(--banner-height);
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-row {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    padding: 112px 24px 12px;
+    text-align: center;
+  }
+
+  .hero-left {
+    min-width: 0;
+    flex-basis: 0;
+  }
+
+  .hero-right,
+  .hero-meta {
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 32px;
   }
 }
