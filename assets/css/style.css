@@ -128,9 +128,11 @@ a {
   margin: 0 auto;
   padding: 0 32px;
   position: relative;
+  overflow: visible;
 }
 
 .hero-banner {
+  position: relative;
   height: 320px;
   overflow: hidden;
   background: #d9e6f7;
@@ -140,7 +142,8 @@ a {
 .hero-banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 
@@ -154,10 +157,10 @@ a {
 
 .hero-profile {
   position: absolute;
-  left: 40px;
+  left: 48px;
   top: 320px;
   transform: translateY(-50%);
-  z-index: 3;
+  z-index: 4;
 }
 
 .hero-spacer {
