@@ -1,10 +1,10 @@
 :root {
-  --bg: #f6f3ef;
+  --bg: #eef3f9;
   --surface: #ffffff;
-  --ink: #101010;
-  --muted: #6f6a65;
-  --accent: #c9742c;
-  --accent-soft: #f5dcc7;
+  --ink: #0d1b2a;
+  --muted: #56647a;
+  --accent: #e06b1c;
+  --accent-soft: #ffe6d4;
   --shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
 }
 
@@ -17,7 +17,7 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at top, #fff7ed 0%, #f6f3ef 45%, #f3eee9 100%);
+  background: radial-gradient(circle at top, #f2f7ff 0%, #eef3f9 45%, #e8eef7 100%);
   min-height: 100vh;
 }
 
@@ -124,11 +124,17 @@ a {
 }
 
 .hero-banner {
+<<<<<<< HEAD
   position: relative;
   height: 240px;
   overflow: hidden;
   background: #d9e6f7;
   border-radius: 16px;
+=======
+  height: 260px;
+  overflow: hidden;
+  background: #d9e6f7;
+>>>>>>> a3a6e765b9667dc1ec8f1cc5e2fa6cbcf19fa7bc
 }
 
 .hero-banner img {
@@ -139,6 +145,7 @@ a {
 }
 
 .hero-body {
+<<<<<<< HEAD
   padding: 88px 0 0;
 }
 
@@ -147,12 +154,21 @@ a {
   left: 24px;
   bottom: -52px;
   z-index: 2;
+=======
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 0 60px 8px;
+  margin-top: -80px;
+>>>>>>> a3a6e765b9667dc1ec8f1cc5e2fa6cbcf19fa7bc
 }
 
 .hero-profile img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
+<<<<<<< HEAD
   border: 5px solid #fff;
   box-shadow: 0 14px 28px rgba(13, 27, 42, 0.18);
   background: #fff;
@@ -161,10 +177,20 @@ a {
 .hero-meta {
   padding-left: 208px;
   max-width: 680px;
+=======
+  border: 4px solid #fff;
+  box-shadow: 0 16px 32px rgba(13, 27, 42, 0.2);
+  background: #fff;
+}
+
+.hero-info {
+  padding-bottom: 8px;
+>>>>>>> a3a6e765b9667dc1ec8f1cc5e2fa6cbcf19fa7bc
 }
 
 .hero-name {
   font-family: "Fraunces", serif;
+<<<<<<< HEAD
   font-size: clamp(2.6rem, 5vw, 4rem);
   font-weight: 600;
   margin-bottom: 10px;
@@ -174,6 +200,15 @@ a {
   font-size: 18px;
   font-weight: 500;
   color: #1f1f1f;
+=======
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 8px;
+}
+
+.hero-role {
+  font-size: 16px;
+  font-weight: 600;
+>>>>>>> a3a6e765b9667dc1ec8f1cc5e2fa6cbcf19fa7bc
   margin-bottom: 6px;
 }
 
@@ -393,6 +428,18 @@ a {
   .hero-profile img {
     width: 140px;
     height: 140px;
+  }
+
+  .hero {
+    margin: -32px -24px 24px;
+  }
+
+  .hero-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px 12px;
+    margin-top: -72px;
   }
 
   .icon-button.close {
